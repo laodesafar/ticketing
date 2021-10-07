@@ -3,11 +3,11 @@ import Link from "next/link";
 import Router from "next/router";
 import useRequest from "../../hooks/use-request";
 
-export default function signup() {
+export default function signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { doRequest, errors } = useRequest({
-    url: "/api/users/signup",
+    url: "/api/users/signin",
     method: "post",
     body: {
       email,
@@ -27,7 +27,7 @@ export default function signup() {
           onSubmit={onSubmit}
           className="bg-white px-6 py-8 rounded shadow-md text-black w-full"
         >
-          <h1 className="mb-8 text-3xl text-center">Sign up</h1>
+          <h1 className="mb-8 text-3xl text-center">Sign In</h1>
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -51,15 +51,15 @@ export default function signup() {
             type="submit"
             className="w-full text-center py-3 rounded bg-green-400 text-white hover:bg-green-dark focus:outline-none my-1"
           >
-            Create Account
+            Sign In
           </button>
         </form>
 
         <div className="text-grey-dark mt-6">
-          Already have an account?
-          <Link href="signin">
+          Dont have'nt an account?
+          <Link href="signup">
             <a className="no-underline border-b border-blue text-blue">
-              Log in
+              Sign Up
             </a>
           </Link>
           .
