@@ -57,7 +57,7 @@ export default function signin() {
 
         <div className="text-grey-dark mt-6">
           Dont have'nt an account?
-          <Link href="signup">
+          <Link href="/auth/signup">
             <a className="no-underline border-b border-blue text-blue">
               Sign Up
             </a>
