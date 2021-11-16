@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Router } from "next/router";
+import Router from "next/router";
 import useRequest from "../../hooks/use-request";
 
 export default function signout() {
